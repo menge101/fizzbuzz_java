@@ -6,11 +6,11 @@ import java.util.ArrayList;
  * Created by mengen on 5/11/15.
  */
 public class FizzBuzz {
-    public static boolean divisibleBy(int dividend, int divisor) {
+    private static boolean divisibleBy(int dividend, int divisor) {
         return ((dividend % divisor) == 0);
     }
 
-    public static String fizzBuzzMapping(int value) {
+    private static String fizzBuzzMapping(int value) {
         if (divisibleBy(value, 3) && divisibleBy(value, 5)) {
             return "FizzBuzz";
         } else if (divisibleBy(value, 3)) {
@@ -45,8 +45,6 @@ public class FizzBuzz {
                 results.add(fizzBuzzMapping(arg));
             }
         }
-
-
         return results;
     }
 
@@ -56,7 +54,7 @@ public class FizzBuzz {
             System.out.println("With one argument, the program starts at zero and operates on a range of numbers up to and including the argument.");
             System.out.println("With two arguments, the program runs from the first argument to the second argument, inclusive.");
             System.out.println("More than two arguments, the program will process each value individually.");
-            System.out.println("Any value that can that is not an integer will be ignored.");
+            System.out.println("Any value that is not an integer will be ignored.");
         }
         else {
             ArrayList<Integer> processedArgs = new ArrayList<>();
